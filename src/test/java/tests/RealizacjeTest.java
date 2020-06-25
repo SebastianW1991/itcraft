@@ -9,16 +9,13 @@ public class RealizacjeTest extends BaseTest {
     @Test
     public void realizacjeNavigationTest(){
         driver.findElement(By.xpath("/html/body/div[2]/header/div/div/nav/div[1]/ul/li[2]/a\n")).click();
-        int realizacjeTitleCompare = driver.getTitle().compareTo(properRealizacjeTitle);
-        System.out.println(realizacjeTitleCompare);
-        if (realizacjeTitleCompare == 0) {
-            System.out.println("Realizacje subpage has correct title");
-        } else {
-            System.out.println("Realizacje subpage has incorrect title");
+
+        assertEquals(driver.getTitle(), "Portfolio zrealizowanych produktów | Duże marki, startupy i inne");
 
 
-        }
         driver.navigate().back();
 
+    }
+    private void assertEquals(String title, String s) {
     }
 }

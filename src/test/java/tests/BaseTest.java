@@ -13,7 +13,7 @@ public abstract class BaseTest {
 
     @BeforeClass
     public static void browserSetup() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver81.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         driver.navigate().to("https://itcraftapps.com/pl/");
